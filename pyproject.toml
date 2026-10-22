@@ -1,0 +1,17 @@
+[project]
+name = "outlook-time-calculator"
+version = "0.1.0"
+description = "Calculates time taken each week by each category of meetings, further broken down by accepted vs not"
+authors = [
+    {name = "Stephen Badger",email = "stephen.badger@gmail.com"}
+]
+license = "GPL-3"
+requires-python = ">=3.14"
+dependencies = [
+    "pyoutlook (>=5.0.0,<6.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
