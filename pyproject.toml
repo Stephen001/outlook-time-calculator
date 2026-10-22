@@ -8,10 +8,25 @@ authors = [
 license = "GPL-3"
 requires-python = ">=3.14"
 dependencies = [
-    "pyoutlook (>=5.0.0,<6.0.0)"
+    "pywin32 (>=312)"
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=8"
+]
+
+[project.scripts]
+otc = "outlook_time_calculator.__main__:main"
+
+[tool.poetry]
+packages = [{include = "outlook_time_calculator", from = "src"}]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.1.1,<10.0.0)"
+]
